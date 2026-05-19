@@ -1,0 +1,6 @@
+node_modules/
+_site/
+.env
+src/articles/
+src/_data/search-index.json
+*.log

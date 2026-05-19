@@ -1,0 +1,33 @@
+---
+layout: base
+title: Toutes les catégories
+description: Parcourir la réglementation incendie par catégorie
+---
+
+<div class="container">
+  <h1>Catégories réglementaires</h1>
+
+  {% set cats = ['ERP', 'IGH', 'HAB', 'BUP', 'ICPE', 'AUTRES'] %}
+  {% for cat in cats %}
+    {% set articles = collections.articlesByCategory[cat] or [] %}
+    <section class="category-section" id="{{ cat | lower }}">
+      <div class="category-header" style="border-left: 5px solid {{ cat | categoryColor }}">
+        <h2 style="color: {{ cat | categoryColor }}">{{ cat }}</h2>
+        <p>{{ cat | categoryName }} — <strong>{{ articles | length }} articles</strong></p>
+      </div>
+
+      <div class="article-list">
+        {% for article in articles | limit(10) %}
+          <div class="article-item">
+            <a href="{{ article.url }}">{{ article.data.title | truncate(100) }}</a>
+          </div>
+        {% endfor %}
+        {% if articles | length > 10 %}
+          <a href="/categories/{{ cat | lower }}/" class="btn-more">
+            Voir les {{ articles | length }} articles {{ cat }} →
+          </a>
+        {% endif %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

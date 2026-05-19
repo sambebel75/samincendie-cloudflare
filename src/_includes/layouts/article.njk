@@ -1,0 +1,89 @@
+---
+layout: base
+---
+<div class="container article-page">
+
+  <div class="article-breadcrumb">
+    <a href="/">Accueil</a> ›
+    <a href="/categories/">Catégories</a> ›
+    <a href="/categories/{{ primaryCategory | lower }}/"
+       style="color: {{ primaryCategory | categoryColor }}">
+      {{ primaryCategory }}
+    </a> ›
+    <span>{{ title | truncate(60) }}</span>
+  </div>
+
+  <article class="article-card">
+
+    <header class="article-header">
+      <span class="category-badge"
+            style="background: {{ primaryCategory | categoryColor }}">
+        {{ primaryCategory }}
+      </span>
+      <h1>{{ title }}</h1>
+      {% if description %}
+        <p class="article-description">{{ description }}</p>
+      {% endif %}
+    </header>
+
+    <div class="article-meta">
+      {% if assignedCodes %}
+        <div class="meta-item">
+          <strong>Codes réglementaires :</strong>
+          {% for code in assignedCodes.split(', ') %}
+            <span class="code-badge">{{ code }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="meta-item">
+        <strong>Catégorie :</strong> {{ categoryName }}
+      </div>
+      {% if confidence %}
+        <div class="meta-item">
+          <strong>Pertinence :</strong> {{ confidence }}%
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="article-content">
+      {{ content | safe }}
+    </div>
+
+    <footer class="article-footer">
+      <a href="{{ url_source }}" target="_blank" rel="noopener" class="source-link">
+        📎 Voir la source originale sur SiteSecurite.com
+      </a>
+    </footer>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <h3>Dans la même catégorie</h3>
+    <div id="related-articles">
+      <p class="loading">Chargement…</p>
+    </div>
+  </aside>
+
+</div>
+
+<script>
+// Charger les articles liés via l'API
+fetch('/api/search?category={{ primaryCategory }}&limit=8')
+  .then(r => r.json())
+  .then(data => {
+    const container = document.getElementById('related-articles');
+    const others = (data.results || []).filter(a => a.url !== '{{ url_source }}').slice(0, 6);
+    if (others.length === 0) {
+      container.innerHTML = '<p>Aucun article lié.</p>';
+      return;
+    }
+    container.innerHTML = others.map(a =>
+      `<div class="related-item">
+         <a href="/articles/${a.id}/">${a.title.slice(0, 80)}…</a>
+       </div>`
+    ).join('');
+  })
+  .catch(() => {
+    document.getElementById('related-articles').innerHTML = '';
+  });
+</script>

@@ -1,0 +1,23 @@
+{
+  "name": "samincendie-cloudflare",
+  "version": "1.0.0",
+  "description": "Réglementation incendie - Portail samincendie.com",
+  "scripts": {
+    "import-articles": "node scripts/import-articles.js",
+    "build-index": "node scripts/build-index.js",
+    "upload-kv": "node scripts/upload-kv.js",
+    "build": "eleventy",
+    "dev": "eleventy --serve --port=8080",
+    "clean": "node -e \"const fs=require('fs'); const p='src/articles'; if(fs.existsSync(p)) fs.readdirSync(p).forEach(f=>fs.unlinkSync(p+'/'+f));\"",
+    "deploy": "npm run import-articles && npm run build-index && npm run build"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "lunr": "^2.3.9",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

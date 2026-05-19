@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — SamIncendie</title>
+  <meta name="description" content="{{ description or 'Réglementation sécurité incendie en France' }}">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        🔥 <strong>SamIncendie</strong>
+        <span>Réglementation incendie</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/">Accueil</a>
+        <a href="/categories/">Catégories</a>
+        <a href="/recherche/">Recherche</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 SamIncendie — Réglementation sécurité incendie</p>
+      <p class="footer-source">Données issues de <a href="https://sitesecurite.com" target="_blank" rel="noopener">SiteSecurite.com</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/search.js"></script>
+</body>
+</html>

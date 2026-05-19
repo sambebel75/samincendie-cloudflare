@@ -1,0 +1,56 @@
+---
+layout: base
+title: Accueil
+description: Portail de la réglementation sécurité incendie en France — ERP, IGH, HAB, ICPE
+---
+
+<div class="container">
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>🔥 Réglementation Sécurité Incendie</h1>
+    <p>{{ collections.articles | length }} articles réglementaires classés et consultables</p>
+
+    <form class="search-form" action="/recherche/" method="get">
+      <input type="text" name="q" placeholder="Rechercher un article, un code, une disposition…"
+             class="search-input" autocomplete="off">
+      <button type="submit" class="search-btn">Rechercher</button>
+    </form>
+  </section>
+
+  <!-- Catégories -->
+  <section class="categories-grid">
+    <h2>Parcourir par catégorie</h2>
+    <div class="grid-6">
+
+      {% set cats = ['ERP', 'IGH', 'HAB', 'BUP', 'ICPE', 'AUTRES'] %}
+      {% for cat in cats %}
+        {% set count = (collections.articlesByCategory[cat] or []) | length %}
+        <a href="/categories/{{ cat | lower }}/" class="category-tile"
+           style="border-top: 4px solid {{ cat | categoryColor }}">
+          <div class="tile-code" style="color: {{ cat | categoryColor }}">{{ cat }}</div>
+          <div class="tile-name">{{ cat | categoryName }}</div>
+          <div class="tile-count">{{ count }} articles</div>
+        </a>
+      {% endfor %}
+
+    </div>
+  </section>
+
+  <!-- Derniers articles -->
+  <section class="recent-articles">
+    <h2>Articles récents</h2>
+    <div class="article-list">
+      {% for article in collections.articles | reverse | limit(12) %}
+        <div class="article-item">
+          <span class="badge" style="background: {{ article.data.primaryCategory | categoryColor }}">
+            {{ article.data.primaryCategory }}
+          </span>
+          <a href="{{ article.url }}">{{ article.data.title | truncate(90) }}</a>
+        </div>
+      {% endfor %}
+    </div>
+    <a href="/categories/" class="btn-all">Voir tous les articles →</a>
+  </section>
+
+</div>
