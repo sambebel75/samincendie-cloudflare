@@ -1,0 +1,20 @@
+---
+layout: base
+title: ICPE — Installations Classées
+description: Articles réglementation incendie ICPE
+permalink: /categories/icpe/index.html
+---
+<div class="container">
+  <div class="category-header" style="border-left: 5px solid #E67E22; margin-bottom: 24px;">
+    <a href="/categories/" style="font-size:0.85rem; color:#888;">← Toutes les catégories</a>
+    <h1 style="color: #E67E22; margin-top: 8px;">ICPE</h1>
+    <p>Installations Classées pour la Protection de l'Environnement — <strong>{{ collections.articlesByCategory['ICPE'] | length }} articles</strong></p>
+  </div>
+  <div class="article-list">
+    {% for article in collections.articlesByCategory['ICPE'] %}
+      <div class="article-item">
+        <a href="{{ article.url }}">{{ article.data.title | truncate(110) }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
