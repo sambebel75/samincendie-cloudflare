@@ -1,0 +1,19 @@
+---
+layout: article
+title: "SiteSecurite.com - Code du Travail"
+url_source: "https://sitesecurite.com/contenu/_codes/cdt/r4614_21a24.php"
+primaryCategory: "ERP"
+categoryName: "Établissements Recevant du Public"
+confidence: 100
+assignedCodes: "ERP, GN, PI, SEE, GE, CO, J, L, M, N, O, P, R, S, T, U, V, W, X, Y, PA, CTS, SG, OA, REF, PS, GA, EF, EP, CRA, EIRP, PE, PO, PU, PX, GEEM"
+classificationMethod: "content"
+description: "Code du Travail"
+keywords: "code du travail, reglementation incendie, reglement incendie, reglement erp, reglement igh, reglementation erp, reglementation igh, Règlement erp, réglementation erp, etablissements recevant du public, établissements recevant du public, établissement recevant du public, etablissement recevant du public, etablissement recevant public, reglement incendie erp, reglement securite erp, securite incendie, sécurité incendie, erp reglement, erp incendie, erp, ERP, igh, IGH, instruction technique, incendie, securite, sécurité, feu, pompier, pompiers, incendie habitation, code construction habitation, code urbanisme"
+slug: "e0b8d9b68bc7f2be2832d2efbe91ae5e"
+---
+
+La formation des représentants du personnel aux comités d'hygiène, de sécurité et des conditions de travail a pour objet :
+
+1° De développer leur aptitude à déceler et à mesurer les risques professionnels et leur capacité d'analyse des conditions de travail ;
+
+2° De les initier aux méthodes et procédés à mettre en œuvre pour prévenir les risques professionnels et améliorer les conditions de travail.

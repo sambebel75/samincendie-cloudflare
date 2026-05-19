@@ -1,0 +1,15 @@
+---
+layout: article
+title: "erp-type-r.php"
+url_source: "https://sitesecurite.com/contenu/portail/erp/erp-type-r.php"
+primaryCategory: "ERP"
+categoryName: "Établissements Recevant du Public"
+confidence: 95
+assignedCodes: "ERP, GN, PI, SEE, GE, CO, J, L, M, N, O, P, R, S, T, U, V, W, X, Y, PA, CTS, SG, OA, REF, PS, GA, EF, EP, CRA, EIRP, PE, PO, PU, PX, GEEM"
+classificationMethod: "url"
+description: ""
+keywords: ""
+slug: "719ac4be2bb2c6047a0f1c219efffeaa"
+---
+
+*Contenu non disponible*
