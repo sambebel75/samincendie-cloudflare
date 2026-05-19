@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "SiteSecurite.com - ERP - Dispositions particulières - Type R - Art R 24 à 25"
+title: "ERP - Dispositions particulières - Type R - Art R 24 à 25"
 url_source: "https://sitesecurite.com/contenu/_erp/erpr/r24a25.php"
 primaryCategory: "ERP"
 categoryName: "Établissements Recevant du Public"
@@ -11,6 +11,9 @@ description: "Règlement ERP - Type R de 1 à 4° catégorie - Établissements d
 keywords: "Type R, type r, règlement erp, réglementation erp, etablissement d'eveil, etablissement d'éveil, etablissement d'enseignement, etablissement de formation, centre de vacance, centres de vacances, centre de loisir, centres de loisirs, établissement recevant du public, incendie, sécurité"
 slug: "e2ebebefa191a0de819a6de7d1fea1cd"
 ---
+
+## R 24 Appareillage des écoles maternelles
+## R 25 Coupure d'urgence (Arrêté du 19 novembre 2001)
 
 (Supprimé par l'arrêté du 20 novembre 2000 confirmé par l'arrêté du 19 novembre 2001.)
 

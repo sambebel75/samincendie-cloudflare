@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "SiteSecurite.com - ERP - Dispositions spéciales - Type GA - Art GA 31"
+title: "ERP - Dispositions spéciales - Type GA - Art GA 31"
 url_source: "https://sitesecurite.com/contenu/_erp/erpga/ga31.php"
 primaryCategory: "ERP"
 categoryName: "Établissements Recevant du Public"
@@ -11,6 +11,8 @@ description: "Règlement ERP - Type GA de 1 à 4° catégorie - Gares accessible
 keywords: "Type GA, type ga, reglement erp, gare, gares, Gare, règlement erp, réglementation erp, incendie, établissements recevant du public, feu"
 slug: "8e7c654acbcabf66ff11cc9c68db8df8"
 ---
+
+## GA 31 Dispositions applicables
 
 Les dispositions du livre II, chapitre VI, du règlement de sécurité sont applicables.
 

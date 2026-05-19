@@ -30,6 +30,16 @@ function escapeYaml(str) {
   return '"' + String(str).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, ' ').trim() + '"';
 }
 
+function cleanTitle(title) {
+  if (!title) return 'Sans titre';
+  // Supprimer les préfixes "SiteSecurite.com - " et "SiteSecurite | "
+  return title
+    .replace(/^SiteSecurite\.com\s*[-–]\s*/i, '')
+    .replace(/^SiteSecurite\s*\|\s*/i, '')
+    .replace(/^SiteSécurité\.com\s*[-–]\s*/i, '')
+    .trim() || 'Sans titre';
+}
+
 function getDescription(scraped) {
   if (!scraped) return '';
   const content = scraped.content || scraped;
@@ -38,11 +48,42 @@ function getDescription(scraped) {
   return paras.slice(0, 2).join(' ').slice(0, 300);
 }
 
-function getExcerpt(scraped) {
+function getFullContent(scraped) {
   if (!scraped) return '';
   const content = scraped.content || scraped;
+
+  const parts = [];
+
+  // Titres h2 et h3 avec leur contenu
+  const h2s = (content.headings && content.headings.h2) ? content.headings.h2 : [];
+  const h3s = (content.headings && content.headings.h3) ? content.headings.h3 : [];
+
+  // Tous les paragraphes
   const paras = Array.isArray(content.paragraphs) ? content.paragraphs : [];
-  return paras.slice(0, 3).join('\n\n');
+
+  // Construire le contenu structuré
+  if (h2s.length > 0) {
+    h2s.forEach(h => {
+      parts.push('## ' + h);
+    });
+    parts.push('');
+  }
+
+  if (h3s.length > 0 && h2s.length === 0) {
+    h3s.forEach(h => {
+      parts.push('### ' + h);
+    });
+    parts.push('');
+  }
+
+  paras.forEach(p => {
+    if (p && p.trim().length > 10) {
+      parts.push(p.trim());
+      parts.push('');
+    }
+  });
+
+  return parts.join('\n') || '*Contenu non disponible*';
 }
 
 function getKeywords(scraped) {
@@ -82,9 +123,9 @@ async function main() {
       }
 
       const cat   = info.primaryCategory ? info.primaryCategory.code : 'AUTRES';
-      const title = info.title || 'Sans titre';
+      const title = cleanTitle(info.title || 'Sans titre');
       const description = getDescription(scraped);
-      const excerpt     = getExcerpt(scraped);
+      const excerpt     = getFullContent(scraped);
       const keywords    = getKeywords(scraped);
       const confidence  = info.primaryCategory ? info.primaryCategory.confidence : 0;
       const codes       = (info.assignedCodes || []).join(', ');

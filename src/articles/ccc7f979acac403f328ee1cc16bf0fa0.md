@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "SiteSecurite.com - Code du Travail"
+title: "Code du Travail"
 url_source: "https://sitesecurite.com/contenu/_codes/cdt/r4724_16a18.php"
 primaryCategory: "ERP"
 categoryName: "Établissements Recevant du Public"
@@ -12,8 +12,24 @@ keywords: "code du travail, reglementation incendie, reglement incendie, regleme
 slug: "ccc7f979acac403f328ee1cc16bf0fa0"
 ---
 
+## R. 4724-16  (Décret n° 2020-88 du 5 février 2020)
+## R. 4724-17 (Abrogé)
+## R. 4724-17-1 (Abrogé)
+## R. 4724-17-2 (Abrogé)
+## R. 4724-18
+
 Un arrêté des ministres chargés du travail et de l'agriculture précise les conditions d'accréditation et les méthodes de mesure permettant de vérifier la conformité de l'éclairage des lieux de travail.
 
 (Abrogé par décret n° 2020-88 du 5 février 2020)
 
 (Abrogé par décret n° 2020-88 du 5 février 2020)
+
+(Abrogé par décret n° 2020-88 du 5 février 2020)
+
+Des arrêtés conjoints des ministres chargés du travail et de l'agriculture précisent les conditions d'accréditation et les méthodes à utiliser pour le mesurage :
+
+2° Des vibrations mécaniques.
+
+3° Des rayonnements optiques artificiels.
+
+4° Des champs électromagnétiques

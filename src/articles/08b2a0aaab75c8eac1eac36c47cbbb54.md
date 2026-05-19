@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "SiteSecurite.com - Code Construction Habitation article L. 186-8"
+title: "Code Construction Habitation article L. 186-8"
 url_source: "https://sitesecurite.com/contenu/_codes/cch/cchl186_08.php"
 primaryCategory: "ERP"
 categoryName: "Établissements Recevant du Public"
@@ -12,8 +12,14 @@ keywords: "code construction habitation, code de la construction et de l'habitat
 slug: "08b2a0aaab75c8eac1eac36c47cbbb54"
 ---
 
+## L. 186-8 (Faits punis)
+
 Est puni de 7500 € d'amende :
 
 1° Le fait de mettre sur le marché ou de mettre à disposition sur le marché un ascenseur ou un composant de sécurité pour ascenseurs sans la déclaration « UE » ou « CE » de conformité prévue à l'article L. 134-2 ;
 
 2° Le fait de mettre sur le marché ou de mettre à disposition sur le marché un ascenseur ou un composant de sécurité pour ascenseurs en violation des prescriptions d'un arrêté du ministre chargé de la construction pris en application du II de l'article L. 186-2 ;
+
+3° Le fait de faire obstacle aux fonctions exercées par les fonctionnaires et agents habilités en application de l'article L. 186-4.
+
+Les modalités d'application du présent article sont fixées par décret en Conseil d'État.
